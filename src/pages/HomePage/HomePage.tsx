@@ -12,12 +12,17 @@ export const HomePage = () => {
       try {
         const data = await cryptoService.getTopCryptos();
         setCryptos(data);
+        setError(null);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch cryptocurrency data');
       }
     };
 
     fetchData();
+
+    // const intervalId = setInterval(fetchData, 15000);
+     
+    // return () => clearInterval(intervalId);
   }, []);
 
   if (error) {

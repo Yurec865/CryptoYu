@@ -1,85 +1,53 @@
-# CryptoYu - Cryptocurrency Tracker with AI Assistant
+# CryptoYu - Cryptocurrency Dashboard
 
-CryptoYu is a modern web application for tracking cryptocurrencies, built with React, TypeScript, and OpenAI. The app provides users with real-time cryptocurrency information and an intelligent assistant for answering cryptocurrency-related questions.
+A modern cryptocurrency dashboard built with React and Web3 integration. The application provides real-time cryptocurrency prices, market data, and an AI-powered chat interface.
 
 ## Features
 
-- 📊 Real-time cryptocurrency price tracking via CoinMarketCap API
-- 🤖 AI assistant powered by OpenAI for cryptocurrency-related queries
-- 💻 Modern interface with dark theme
-- 📱 Responsive design for all devices
-- 🔒 Secure API key storage
+- Real-time cryptocurrency price updates
+- Web3 integration with MetaMask
+- AI chat interface for cryptocurrency queries
+- Responsive design
+- Dark theme UI
 
-## Tech Stack
+## AI Integration
 
-- **Frontend:**
-  - React
-  - TypeScript
-  - Vite
-  - CSS Modules
+The application uses OpenAI's GPT model for the chat interface. Currently, it's configured to use a test model, but you can easily change it to any other OpenAI model by updating the configuration in the AI service.
 
-- **Backend:**
-  - Node.js
-  - Express
-  - OpenAI API
-  - CoinMarketCap API
+To change the AI model:
+1. Navigate to the AI service configuration
+2. Update the model parameter to your preferred OpenAI model
+3. Update your API key if necessary
 
-## Installation
+## Technologies Used
 
-1. Clone the repository:
-```bash
-git clone https://github.com/Yurec865/CryptoYu.git
-cd cryptoyu
-```
+- React
+- TypeScript
+- Web3.js
+- Ethers.js
+- OpenAI API
+- Vite
+- CSS3
 
+## Getting Started
+
+1. Clone the repository
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file and add your API keys:
+   ```
+   VITE_OPENAI_API_KEY=your_openai_api_key
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-3. Create a `.env` file in the root directory and add your API keys:
-```env
-VITE_COINMARKETCAP_API_KEY=your-coinmarketcap-api-key
-VITE_OPENAI_API_KEY=your-openai-api-key
-```
+## Contributing
 
-## Running the Project
-
-1. Start the development server:
-```bash
-npm run dev
-```
-
-2. In a separate terminal, start the backend server:
-```bash
-node server.js
-```
-
-The application will be available at `http://localhost:5173`
-
-## Project Structure
-
-```
-cryptoyu/
-├── src/
-│   ├── components/     # React components
-│   ├── pages/         # Application pages
-│   ├── services/      # API services
-│   └── styles/        # CSS styles
-├── public/            # Static files
-├── server.js         # Backend server
-└── .env              # Environment variables
-```
-
-## API Keys
-
-The application requires the following API keys:
-- CoinMarketCap API: [https://coinmarketcap.com/api/](https://coinmarketcap.com/api/)
-- OpenAI API: [https://platform.openai.com/](https://platform.openai.com/)
-
-## License
-
-MIT
+Feel free to submit issues and enhancement requests!
 
 # React + TypeScript + Vite
 

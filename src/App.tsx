@@ -1,22 +1,24 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HomePage } from './pages/HomePage/HomePage'
-import './App.css'
+import { Web3ReactProvider } from '@web3-react/core';
+import { ethers } from 'ethers';
+import { HomePage } from './pages/HomePage/HomePage';
+import { MetaMaskLogin } from './components/MetaMaskLogin/MetaMaskLogin';
+import './App.css';
+
+function getLibrary(provider: ethers.providers.ExternalProvider | ethers.providers.JsonRpcFetchFunc) {
+  const library = new ethers.providers.Web3Provider(provider);
+  library.pollingInterval = 12000;
+  return library;
+}
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <div className="header">
-          <h1>CryptoYu App</h1>
-        </div>
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-          </Routes>
-        </div>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <div className="App">
+        <MetaMaskLogin />
+        <HomePage />
       </div>
-    </Router>
-  )
+    </Web3ReactProvider>
+  );
 }
 
-export default App
+export default App;
