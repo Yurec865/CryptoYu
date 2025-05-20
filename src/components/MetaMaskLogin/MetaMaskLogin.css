@@ -1,7 +1,7 @@
 .metamask-login {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 35px;
+  right: 20%;
   z-index: 1000;
 }
 
@@ -37,10 +37,7 @@
 .wallet-info {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 8px 16px;
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
+  gap: 10px;
 }
 
 .wallet-address {
